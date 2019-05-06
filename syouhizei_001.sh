@@ -39,7 +39,6 @@ Directory="C:/Users/komori/Desktop/TMP/DATA_IC/"
 
 cat $Directory$Meisai_File1 |nkf -w8 \
 |gawk 'BEGIN { FPAT = "([^,]+)|(\"[^\"]+\")";OFS=","; }
-      NR >3 
       {
 	 if (($22 ~/002/) || ($22 ~/004/) || ($22 ~/102/) || ($22 ~/104/))
            print $7,$8,$9,$10,$11,$12,$13,$14,$15,$18,$20,$21,$22,$26,$27,$28,$29 > "tmp1.csv"; #リダイレクトの書き方でうまく動いた
